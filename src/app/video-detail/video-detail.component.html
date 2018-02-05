@@ -1,0 +1,31 @@
+<div *ngIf='!video'> Loading </div>
+
+
+
+<div *ngIf='video'>
+
+    <h1> {{video?.name}}</h1>
+
+    <iframe 
+    width="560" 
+    height="315" 
+    [src]="getEmbedUrl(video) | safe "
+    frameborder="0" allow="autoplay; encrypted-media" 
+    allowfullscreen
+    *ngIf='video.embed'>
+    </iframe>
+    
+     <div class="text-center" *ngIf='video.image && !video.embed'>
+      <img class="img-responsive" [src]='video.image' alt="{{video.name}} image">
+    </div>
+     
+    
+
+
+</div>
+
+
+
+
+
+

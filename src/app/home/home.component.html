@@ -1,0 +1,63 @@
+<div class="jumbotron">
+
+
+
+  <h1 class="display-4">Welcome to History Of Rome Site!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+
+
+  <carousel *ngIf = 'homeImageList'>
+
+
+
+      <slide >
+          <a class="" routerLink='/videos/' routerLinkActive='active'>
+          <img class='img-main-carousel' [src]="videoListDefaultImage" alt="First slide" style="display: block; width: 100%;">
+        </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Video List</h3>
+            <p><a class="btn btn-default" routerLink='/videos/' routerLinkActive='active'> View </a></p>
+            
+          </div>
+        </slide>
+
+
+
+    <slide *ngFor='let imageObj of homeImageList'>
+      <a class="" routerLink='/videos/{{ imageObj.slug }}' routerLinkActive='active'>
+      <img class='img-main-carousel' [src]="imageObj.image" alt="First slide" style="display: block; width: 100%;">
+    </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{imageObj.name}}</h3>
+        <p><a class="btn btn-default" routerLink='/videos/{{ imageObj.slug }}' routerLinkActive='active'> View </a></p>
+        
+      </div>
+    </slide>
+     <!--
+    <slide>
+        <a class="" #imageTwo href='/videos/video-2'  (click)='preventNormal($event, imageTwo)' >
+      <img class='img-main-carousel' src="assets/images/2.jpg" alt="Second slide" style="display: block; width: 100%;">
+    </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>History Of Rome II</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+      </div>
+    </slide>
+    <slide>
+        <a class="" #imageThree href='/videos/video-3'  (click)='preventNormal($event, imageThree)'>
+      <img class='img-main-carousel' src="assets/images/3.jpg" alt="Third slide" style="display: block; width: 100%;">
+    </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>History Of Rome III</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        
+      </div>
+    </slide> -->
+  </carousel>
+</div>

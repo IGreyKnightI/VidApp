@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+.main-container {
+    min-height: 800px;
+    margin-bottom: 20px;
+}
+.img-main-carousel{
+    max-height: 500px;
+}
+
+.carousel-control.right, .carousel-control.left {
+    cursor: pointer;
+
+}
+.carousel-caption {
+    color: dodgerblue;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.search-inline .form-control {
+    
+    
+}
