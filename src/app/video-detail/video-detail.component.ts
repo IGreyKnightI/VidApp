@@ -56,13 +56,13 @@ export class VideoDetailComponent implements OnInit, OnDestroy {
       }
     );
 
-    for(let comment of this.comments) {
-      if (this.slug == comment.belongingVid){
+    // for(let comment of this.comments) {
+    //   if (this.slug == comment.belongingVid){
  
-         this.specComments.push(comment)
-         console.log(this.specComments)
-       }
-     }
+    //      this.specComments.push(comment)
+    //      console.log(this.specComments)
+    //    }
+    //  }
        
 
 
