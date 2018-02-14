@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { VideoItem } from './video';
 
 
 const endpoint = 'assets/json/videos.json' // http:/www.yourdomain.com/api/videos
@@ -25,7 +26,7 @@ export class VideoService {
           return item
         }
       })
-      console.log(data)
+      
       if (data.length == 1) {
         return data[0]
       }
@@ -56,4 +57,20 @@ search(query) {
     console.log(error, caught)
   }
 
+
+//upload
+
+addVideo(videos: VideoItem) {
+  //this.videos.push(recipe);
+  
+
 }
+
+
+}
+
+
+
+
+
+

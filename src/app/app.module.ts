@@ -20,6 +20,9 @@ import { DropdownDirective } from '../shared/dropdown.directive';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { SearchDetailComponent } from './search-detail/search-detail.component';
+import { VideoEditComponent } from './video-edit/video-edit.component';
+import { CommentSectionComponent } from './video-detail/comment-section/comment-section.component';
+import { CommentSectionService } from './video-detail/comment-section.service';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { SearchDetailComponent } from './search-detail/search-detail.component';
     DropdownDirective,
     HomeComponent,
     SearchComponent,
-    SearchDetailComponent
+    SearchDetailComponent,
+    VideoEditComponent,
+    CommentSectionComponent,
+    
     
   ],
   imports: [
@@ -43,7 +49,7 @@ import { SearchDetailComponent } from './search-detail/search-detail.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [CommentSectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

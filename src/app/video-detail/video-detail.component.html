@@ -4,41 +4,66 @@
 
 <div *ngIf='video'>
         <div class="row" >
-            <div class="col-sm-10">
+            <div class="col-sm-9">
                 <h1> {{video?.name}}</h1>
 
-                <iframe 
-                width="960" 
-                height="585" 
-                [src]="getEmbedUrl(video) | safe "
-                frameborder="0" allow="autoplay; encrypted-media" 
-                allowfullscreen
-                *ngIf='video.embed'>
-                </iframe>
+                <div class="videoWrapper ">
+                        <iframe 
+                        width="840"
+                        height="472"
+                
+                        [src]="getEmbedUrl(video) | safe "
+                        frameborder="0" allow="autoplay; encrypted-media" 
+                        allowfullscreen
+                        *ngIf='video.embed'>
+                        </iframe>
+
+                </div>
+
+                <div class="desc">
+                        <h4>Description:</h4>
+                        {{video?.description}}
+                </div>
+
+                <ul class="list-group" >
+                        <a
+                        class="list-group-item" 
+                        style="cursor: pointer"
+
+                        *ngFor="let commentar of comments; let i = index"
+                        (click)="onEditItem(i)"
+                        >
+                      <div >{{commentar.name}}: <p>{{commentar.comment}}</p></div>
+                      </a>
+                      </ul>
+
+                      <div class="col-sm-3">
+                
+                            <app-comment-section></app-comment-section>
+        
+                            <hr>
+                            
+        
+                    </div>
             </div>
 
+            
+
            
-            <div class="col-sm-10 desc">
-                    <h4>Description:</h4>
-                    {{video?.description}}
-            </div>
+
+            
+           
+           
+            
+
+            
+
+
         </div>
     
      <div class="text-center" *ngIf='video.image && !video.embed'>
         <img class="img-responsive" [src]='video.image' alt="{{video.name}} image">
     </div>
-
-
- 
-       
-    
-
-
-
-     
-    
-
-
 </div>
 
 

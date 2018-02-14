@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { SearchDetailComponent } from './search-detail/search-detail.component';
+import { VideoEditComponent } from './video-edit/video-edit.component';
 
 const appRoutes: Routes = [
     {
@@ -22,8 +23,16 @@ const appRoutes: Routes = [
         component: VideoListComponent,
     },
     {
+        path: 'videos/new', component: VideoEditComponent
+
+    },
+    {
         path:"videos/:slug",
         component: VideoDetailComponent,
+    },
+    
+    {
+        path: ':slug/edit',  component: VideoEditComponent
     },
 
 ]
