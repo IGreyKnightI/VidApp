@@ -1,18 +1,24 @@
 import { Subject } from 'rxjs/Subject';
-import { videoComment } from './comment-section/comment.model';
+import { aboutComment } from './comment.model';
 
 
 export class CommentSectionService {
-    commentsChanged = new Subject<videoComment[]>();
+    commentsChanged = new Subject<aboutComment[]>();
     startedEditing = new Subject<number>();
-    private comments: videoComment[] =[
+    private comments: aboutComment[] =[
         
        
-        new videoComment('Nik', 'Good', 'video-1'),
-        new videoComment('Tom', 'Great', 'video-1'),
-        new videoComment('Tom', 'Bad', 'video-2'),
-        new videoComment('Tom', '3 is Bad', 'video-3'),
+        new aboutComment('Nik', 'Good'),
+        new aboutComment('Tom', 'Great'),
+        new aboutComment('Tom', 'Bad'),
+        new aboutComment('Tom', '3 is Bad'),
       ];
+
+      setComments (comments: aboutComment[]) {
+
+        this.comments = comments;
+        this.commentsChanged.next(this.comments.slice());
+      }
 
       getComments() {
           return this.comments.slice();
@@ -22,12 +28,12 @@ export class CommentSectionService {
           return this.comments[index];
       }
 
-      addComment(comment: videoComment){
+      addComment(comment: aboutComment){
           this.comments.push(comment);
           this.commentsChanged.next(this.comments.slice())
       }
 
-      addComments(comments: videoComment[]) {
+      addComments(comments: aboutComment[]) {
         //    for (let ingredient of ingredients) {
         //        this.addIngredient(ingredient)
         //    }
@@ -36,8 +42,8 @@ export class CommentSectionService {
         this.commentsChanged.next(this.comments.slice())
       }
 
-      updateComment(index: number, newVideoComment: videoComment){
-          this.comments[index] = newVideoComment;
+      updateComment(index: number, newAboutComment: aboutComment){
+          this.comments[index] = newAboutComment;
           this.commentsChanged.next(this.comments.slice());
       }
 

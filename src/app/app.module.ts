@@ -21,8 +21,13 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { SearchDetailComponent } from './search-detail/search-detail.component';
 import { VideoEditComponent } from './video-edit/video-edit.component';
-import { CommentSectionComponent } from './video-detail/comment-section/comment-section.component';
-import { CommentSectionService } from './video-detail/comment-section.service';
+import { CommentSectionComponent } from './about/comment-section/comment-section.component';
+import { CommentSectionService } from './about/comment-section/comment-section.service';
+import { AboutComponent } from './about/about.component';
+import { DataStorageService } from '../shared/data-storage.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from './auth/auth.service';
 
 
 @NgModule({
@@ -37,6 +42,9 @@ import { CommentSectionService } from './video-detail/comment-section.service';
     SearchDetailComponent,
     VideoEditComponent,
     CommentSectionComponent,
+    AboutComponent,
+    SignupComponent,
+    SigninComponent,
     
     
   ],
@@ -49,7 +57,7 @@ import { CommentSectionService } from './video-detail/comment-section.service';
     FormsModule
 
   ],
-  providers: [CommentSectionService],
+  providers: [CommentSectionService, DataStorageService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

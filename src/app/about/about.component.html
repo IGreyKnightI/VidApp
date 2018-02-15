@@ -1,0 +1,96 @@
+
+
+<div class="col-sm-8">
+    <h1>About</h1>
+<p>
+  History of Rome is a special site for sharing all information on ancient history, especially that of 
+  the Romans 
+</p>
+
+<p>Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur.
+  
+  <p>2 Hi omnes lingua, institutis, legibus inter se differunt. Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit. </p>
+
+  <p>3 Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea 
+    quae ad effeminandos animos pertinent important, 4 proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt.</p>
+
+  <p>Qua de causa Helvetii quoque reliquos Gallos virtute praecedunt, quod fere cotidianis proeliis cum Germanis contendunt, cum aut suis finibus eos 
+      prohibent aut ipsi in eorum finibus bellum gerunt.</p>
+  
+  <p>5 [Eorum una, pars, quam Gallos obtinere dictum est, initium capit a flumine Rhodano, continetur 
+      Garumna flumine, Oceano, finibus Belgarum, attingit etiam ab Sequanis et Helvetiis flumen Rhenum, vergit ad septentriones.</p>
+
+  <p>6 Belgae ab extremis 
+      Galliae finibus oriuntur, pertinent ad inferiorem partem fluminis Rheni, spectant in septentrionem et orientem solem.</p>
+
+  <p> 7 Aquitania a Garumna flumine 
+      ad Pyrenaeos montes et eam partem Oceani quae est ad Hispaniam pertinet; spectat inter occasum solis et septentriones. </p>
+
+    </div>
+
+    <div class="col-sm-4">
+
+
+      <h1>
+          Contact
+      </h1>
+      
+      <p>Address: Address Example</p>
+
+      <p>Mail:  historyofrome@gmail.com</p>
+      <p>Phone: 913481 4891 3481  </p>
+      
+      
+      
+
+
+
+    </div>
+
+
+  
+
+
+  
+  
+     
+
+
+
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <hr>
+    <h3>
+        Post comments and suggestions here
+      </h3>
+
+<ul class="list-group" >
+  <a
+  class="list-group-item" 
+  style="cursor: pointer"
+
+  *ngFor="let commentar of comments; let i = index"
+  (click)="onEditItem(i)"
+  >
+<div  >{{commentar.name}}: <p>{{commentar.comment}}</p></div>
+</a>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="row">
+<div class="col-sm-3">
+
+      <app-comment-section></app-comment-section>
+
+      <hr>
+      
+
+</div>
+
+</div>

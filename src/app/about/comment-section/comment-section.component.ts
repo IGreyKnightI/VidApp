@@ -3,11 +3,17 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
 import { ViewChild } from '@angular/core';
-import { videoComment } from './comment.model';
-import { CommentSectionService } from '../comment-section.service';
-import { VideoItem } from '../../videos/video';
+
+import { CommentSectionService } from './comment-section.service';
 import {ActivatedRoute} from '@angular/router';
-import { VideoService } from '../../videos/videos.service';
+
+
+import { aboutComment } from './comment.model';
+
+
+
+
+
 
 
 
@@ -25,35 +31,21 @@ export class CommentSectionComponent implements OnInit {
   subscription: Subscription;
   editMode = false;
   editedItemIndex: number;
-  editedItem: videoComment;
+  editedItem: aboutComment;
   slug:string;
   private routeSub:any;
   private req:any;
-  video: VideoItem;
-  comments: videoComment[];
-  specComments: videoComment[];
+  
+  comments: aboutComment[];
+  specComments: aboutComment[];
   
   
   
   
 
-  constructor(
-    private csService: CommentSectionService,
-    private route: ActivatedRoute, 
-    private _video:VideoService) { }
+  constructor(private csService: CommentSectionService, private route: ActivatedRoute, ) { }
 
   ngOnInit() {
-
-    this.routeSub = this.route.params.subscribe(params => {
-      
-      this.slug = params['slug']
-      console.log(this.slug);
-
-      this.req = this._video.get(this.slug).subscribe(data=>{
-        this.video = data as VideoItem
-        })
-      });
-
     this.subscription = this.csService.startedEditing
     .subscribe(
       (index: number) => {
@@ -71,34 +63,19 @@ export class CommentSectionComponent implements OnInit {
     this.comments = this.csService.getComments();
     this.subscription = this.csService.commentsChanged
     .subscribe(
-      (comments: videoComment[]) => {
+      (comments: aboutComment[]) => {
         this.comments = comments;
         
       }
     );
   
   }
-
-
-  /* filter() {
-    this.specComments = [];
-   for(let comment of this.comments) {
-     if (this.slug == comment.belongingVid){
-        this.specComments.push(comment)
-        console.log(this.specComments)
-      
-       
-      //this.comments.push(this.specComments);
-     }
-   }} */
- 
-
   onSubmit(form: NgForm){
 
     const value = form.value;
     
     
-    const newComment = new videoComment(value.name, value.comment, this.slug);
+    const newComment = new aboutComment(value.name, value.comment);
     
     if(this.editMode){
       this.csService.updateComment(this.editedItemIndex, newComment)
@@ -124,3 +101,16 @@ export class CommentSectionComponent implements OnInit {
   }
 
 }
+
+
+  /* filter() {
+    this.specComments = [];
+   for(let comment of this.comments) {
+     if (this.slug == comment.belongingVid){
+        this.specComments.push(comment)
+        console.log(this.specComments)
+      
+       
+      //this.comments.push(this.specComments);
+     }
+   }} */

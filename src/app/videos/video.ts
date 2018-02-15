@@ -1,4 +1,4 @@
-import { videoComment } from "../video-detail/comment-section/comment.model";
+
 
 export class VideoItem {
     slug: string;
@@ -7,9 +7,10 @@ export class VideoItem {
     image?: string;
     description?: string;
     featured?: Boolean;
-    //vidComments: videoComment[];
-    
 
+
+    
+    // comments: videoComment[];
     //  constructor(slug: string, name: string, embed: string, image: string, featured: boolean, vidComments: videoComment[]) {
     //     this.slug = slug
     //     this.name = name;

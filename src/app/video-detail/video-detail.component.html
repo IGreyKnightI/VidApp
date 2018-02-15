@@ -25,39 +25,11 @@
                         {{video?.description}}
                 </div>
 
-                <ul class="list-group" >
-                        <a
-                        class="list-group-item" 
-                        style="cursor: pointer"
 
-                        *ngFor="let commentar of comments; let i = index"
-                        (click)="onEditItem(i)"
-                        >
-                      <div >{{commentar.name}}: <p>{{commentar.comment}}</p></div>
-                      </a>
-                      </ul>
-
-                      <div class="col-sm-3">
                 
-                            <app-comment-section></app-comment-section>
-        
-                            <hr>
-                            
-        
-                    </div>
+
+                
             </div>
-
-            
-
-           
-
-            
-           
-           
-            
-
-            
-
 
         </div>
     
