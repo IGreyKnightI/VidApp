@@ -12,15 +12,6 @@ import { aboutComment } from './comment.model';
 
 
 
-
-
-
-
-
-
-
-
-
 @Component({
   selector: 'app-comment-section',
   templateUrl: './comment-section.component.html',

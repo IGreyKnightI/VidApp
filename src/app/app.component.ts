@@ -16,9 +16,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private route:ActivatedRoute, 
               private dataStorageService: DataStorageService,
-              private authService: AuthService) {
-
-  }
+              private authService: AuthService) {}
 
 
   ngOnInit() {
@@ -26,13 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
         apiKey: "AIzaSyBOlPGX1JLgj28scbiISJPKmNU-dJ-V__M",
         authDomain: "ng-vid-app.firebaseapp.com"
       });
-
-
-
-
-    
-    
-    this.routeSub= this.route.params.subscribe(params=>{
+      this.routeSub= this.route.params.subscribe(params=>{
       this.query = params ['q']
     })
   }
@@ -48,14 +40,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
 // save data to firebase
   onSaveData(){
-
     this.dataStorageService.storeComments()
     .subscribe(
       (response: Response) => {
         console.log(response);
       }
     );
-  
   }
 
 

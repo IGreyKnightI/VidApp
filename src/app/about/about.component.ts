@@ -21,8 +21,6 @@ export class AboutComponent implements OnInit {
     private csService: CommentSectionService) { }
 
   ngOnInit() {
-
-
     this.comments = this.csService.getComments();
     this.subscription = this.csService.commentsChanged
     .subscribe(

@@ -46,20 +46,8 @@
 
 
     </div>
-
-
-  
-
-
-  
-  
-     
-
-
-
-
-
-<div class="row">
+    
+    <div class="row">
   <div class="col-sm-6">
     <hr>
     <h3>
@@ -70,11 +58,10 @@
   <a
   class="list-group-item" 
   style="cursor: pointer"
-
   *ngFor="let commentar of comments; let i = index"
   (click)="onEditItem(i)"
   >
-<div  >{{commentar.name}}: <p>{{commentar.comment}}</p></div>
+<div>{{commentar.name}}: <p>{{commentar.comment}}</p></div>
 </a>
 </ul>
 

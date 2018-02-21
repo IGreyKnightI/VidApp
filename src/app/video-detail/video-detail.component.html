@@ -20,10 +20,7 @@
 
                 </div>
 
-                <div class="desc">
-                        <h4>Description:</h4>
-                        {{video?.description}}
-                </div>
+                
 
 
                 
@@ -36,6 +33,15 @@
      <div class="text-center" *ngIf='video.image && !video.embed'>
         <img class="img-responsive" [src]='video.image' alt="{{video.name}} image">
     </div>
+
+
+    <div class="desc col-sm-9">
+        <h4>Description:</h4>
+        {{video?.description}}
+    </div>
+
+
+
 </div>
 
 

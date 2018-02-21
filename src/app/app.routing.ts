@@ -11,37 +11,23 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 
 const appRoutes: Routes = [
-    {
-        path:"", component: HomeComponent,
-    },
+    {path:"", component: HomeComponent,},
 
-    {
-        path:"search", component: SearchDetailComponent,
-    },
+    {path:"search", component: SearchDetailComponent,},
 
-    {
-        path:"videos", component: VideoListComponent,
-    },
-    {
-        path: 'videos/new', component: VideoEditComponent
+    {path:"videos", component: VideoListComponent,},
 
-    },
-    {
-        path:"videos/:slug", component: VideoDetailComponent,
-    },
+    {path: 'videos/new', component: VideoEditComponent},
+
+    {path:"videos/:slug", component: VideoDetailComponent,},
     
-    {
-        path: ':slug/edit', component: VideoEditComponent
-    },
-    {
-        path:"about", component: AboutComponent
-    },
-    {
-        path:"signup", component: SignupComponent
-    },
-    {
-        path:"signin", component: SigninComponent
-    }
+    {path: ':slug/edit', component: VideoEditComponent},
+
+    {path:"about", component: AboutComponent},
+
+    {path:"signup", component: SignupComponent},
+
+    {path:"signin", component: SigninComponent}
 
 ]
 
