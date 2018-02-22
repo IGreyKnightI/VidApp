@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { VideoItem } from '../videos/video';
 import { VideoService } from '../videos/videos.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,9 @@ export class VideoListComponent implements OnInit, OnDestroy {
   // todayDate;
   videoList: [VideoItem];
 
-  constructor(private _video:VideoService) { }
+  constructor(private _video:VideoService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
     //this.todayDate = new Date()
@@ -30,6 +33,10 @@ export class VideoListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.req.unsubscribe()
+  }
+
+  onNewVideo() {
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 
   

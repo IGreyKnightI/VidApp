@@ -4,21 +4,24 @@
       "slug": "video-1",
       "embed": "ItwGz43a_ak",
       "image": "assets/images/1.jpg",
-      "featured": true
+      "featured": true,
+      "description": "This video covers the mythic origins of Rome from Aeneas to the founding of Rome by Romulus in 753 BC through the seven kings to the death of Lucius Tarquinius in 509 BC. "
     },
     {
       "name": "Roman Republic 1", 
       "slug": "video-2",
       "embed": "plm9DvpInyY",
       "image": "assets/images/2.jpg",
-      "featured": true
+      "featured": true,
+      "description": "This video covers the the republic era from 509 - 386 BC and covers the various wars and event of that time frame."
     },
     {
       "name": "Roman Republic 2", 
       "slug": "video-3",
       "embed": null,
       "image": "assets/images/3.jpg",
-      "featured": false
+      "featured": false,
+      "description": "Video description"
     },
 
 
@@ -27,7 +30,8 @@
       "slug": "video-4",
       "embed": "1jWwlS879kY",
       "image": "assets/images/4.jpg",
-      "featured": false
+      "featured": false,
+      "description": "Video description"
     },
 
 
@@ -36,14 +40,16 @@
       "slug": "video-5",
       "embed": "XRXEdv7Dxkg",
       "image": "assets/images/5.jpg",
-      "featured": false
+      "featured": false,
+      "description": "This video traces the battles in Hannibal's war against Rome from its beginning to the battle of Zama."
     },
     {
       "name": "Late Republic 1", 
       "slug": "video-6",
       "embed": "YDCNJrsVwbM",
       "image": "assets/images/6.jpg",
-      "featured": false
+      "featured": false,
+      "description": "Video description"
     },
 
     {
@@ -51,7 +57,8 @@
       "slug": "video-7",
       "embed": "tORw6nE8gGM",
       "image": "assets/images/7.jpg",
-      "featured": false
+      "featured": false,
+      "description": "Video description"
     },
 
     {
@@ -59,7 +66,8 @@
       "slug": "video-8",
       "embed": "EdW_oZU4LIs",
       "image": "assets/images/8.jpg",
-      "featured": false
+      "featured": false,
+      "description": "Video description"
     }
 
 ]

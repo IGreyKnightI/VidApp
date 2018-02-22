@@ -3,23 +3,43 @@
 
 
 <div *ngIf='video'>
+        <div class="row" >
+            <div class="col-sm-9">
+                <h1> {{video?.name}}</h1>
 
-    <h1> {{video?.name}}</h1>
+                <div class="videoWrapper ">
+                        <iframe 
+                        width="840"
+                        height="472"
+                
+                        [src]="getEmbedUrl(video) | safe "
+                        frameborder="0" allow="autoplay; encrypted-media" 
+                        allowfullscreen
+                        *ngIf='video.embed'>
+                        </iframe>
 
-    <iframe 
-    width="560" 
-    height="315" 
-    [src]="getEmbedUrl(video) | safe "
-    frameborder="0" allow="autoplay; encrypted-media" 
-    allowfullscreen
-    *ngIf='video.embed'>
-    </iframe>
+                </div>
+
+                
+
+
+                
+
+                
+            </div>
+
+        </div>
     
      <div class="text-center" *ngIf='video.image && !video.embed'>
-      <img class="img-responsive" [src]='video.image' alt="{{video.name}} image">
+        <img class="img-responsive" [src]='video.image' alt="{{video.name}} image">
     </div>
-     
-    
+
+
+    <div class="desc col-sm-9">
+        <h4>Description:</h4>
+        {{video?.description}}
+    </div>
+
 
 
 </div>

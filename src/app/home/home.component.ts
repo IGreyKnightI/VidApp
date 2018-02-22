@@ -38,6 +38,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.req.unsubscribe();
   }
 
+  
+
   preventNormal(event:MouseEvent, image:any) {
 
     if(!image.prevented) {
